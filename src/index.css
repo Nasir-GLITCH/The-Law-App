@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Manrope:wght@400;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-headline: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-label: "Inter", ui-sans-serif, system-ui, sans-serif;
+
+  --color-primary: #00241a;
+  --color-primary-container: #0e3b2e;
+  --color-on-primary: #ffffff;
+  --color-on-primary-container: #7aa694;
+  --color-primary-fixed: #bfecd9;
+  --color-on-primary-fixed: #002117;
+  --color-primary-fixed-dim: #a3d0be;
+
+  --color-secondary: #4f625a;
+  --color-secondary-container: #cfe4da;
+  --color-on-secondary: #ffffff;
+  --color-on-secondary-container: #54675f;
+  --color-secondary-fixed: #d2e7dd;
+  --color-on-secondary-fixed-variant: #384b43;
+
+  --color-tertiary: #0e231e;
+  --color-tertiary-container: #243833;
+  --color-on-tertiary: #ffffff;
+  --color-tertiary-fixed: #d1e8e0;
+
+  --color-background: #f8faf9;
+  --color-surface: #f8faf9;
+  --color-on-surface: #191c1c;
+  --color-on-surface-variant: #414845;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #f2f4f3;
+  --color-surface-container: #eceeed;
+  --color-surface-container-high: #e6e9e8;
+  --color-surface-container-highest: #e1e3e2;
+  --color-surface-bright: #f8faf9;
+  --color-surface-dim: #d8dad9;
+
+  --color-outline: #717974;
+  --color-outline-variant: #c0c8c3;
+
+  --radius-xl: 1.5rem;
+}
+
+@layer base {
+  body {
+    @apply bg-background text-on-surface font-body antialiased;
+  }
+}
+
+@layer utilities {
+  .glassmorphism {
+    @apply bg-surface-container-lowest/80 backdrop-blur-xl border border-outline-variant/15;
+  }
+  
+  .editorial-shadow {
+    box-shadow: 0 12px 48px rgba(0, 36, 26, 0.06);
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
